@@ -111,3 +111,80 @@ a {
     text-decoration: none;
 }
 ```
+
+# Sessão 3: JavaScript Básico
+
+### Sintaxe Básica e Estrutura
+
+~~~javascript
+const mensagem = "Olá, Mundo!";
+alert(mensagem);
+~~~
+
+
+A linha ``` const mensagem = "Olá, Mundo!" ``` cria uma variável chamada mensagem e atribui a ela o valor "Olá, Mundo!".
+A palavra-chave ```const``` é usada para declarar uma constante, o que significa que o valor de mensagem não pode ser alterado depois de definido.
+
+
+###  Estruturas de Controle
+
+~~~javascript
+const hora = 10;
+if (hora < 12) {
+    console.log("Bom dia!");
+} else {
+    console.log("Boa tarde!");
+}
+~~~
+
+Aqui definimos a variável hora como 10 e usamos uma estrutura condicional if para verificar se hora é menor que 12. Se for, ele imprime "Bom dia!" no console, caso contrário, imprime "Boa tarde!". Como hora é 10, o console exibirá "Bom dia!".
+
+
+###  Manipulação Simples do DOM
+
+
+~~~javascript
+document.getElementById("meuTitulo").innerHTML = "Título Alterado";
+~~~
+
+
+Aqui selecionamos um elemento do documento HTML com o ID "meuTitulo" e alteramos o seu conteúdo para "Título Alterado". Ele usa ````document.getElementById("meuTitulo").innerHTML```` para acessar e modificar o HTML interno desse elemento.
+
+
+###  Funções e Eventos Básicos
+
+~~~javascript
+function mostrarMensagem() {
+    alert("Você clicou no botão!");
+}
+
+document.getElementById("meuBotao").onclick = mostrarMensagem;
+~~~
+
+Nesse exemplo temos a função chamada mostrarMensagem, que exibe um alerta com a mensagem "Você clicou no botão!" quando chamada. Em seguida, ele usa ``document.getElementById("meuBotao").onclick = mostrarMensagem`` para associar essa função ao evento de clique de um botão com o ID "meuBotao". Assim, quando o botão é clicado, a função mostrarMensagem é executada, exibindo o alerta.
+
+
+
+ ### EXEMPLO DE INTERATIVIDADE
+
+~~~html
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Página Interativa</title>
+    <script>
+        function alterarTexto() {
+            document.getElementById("meuParagrafo").innerHTML = "Texto alterado pelo JavaScript!";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="meuTitulo">Título Original</h1>
+    <p id="meuParagrafo">Este é um parágrafo.</p>
+    <button id="meuBotao" onclick="alterarTexto()">Clique aqui</button>
+</body>
+</html>
+~~~
+
+
+# Projeto Prático
