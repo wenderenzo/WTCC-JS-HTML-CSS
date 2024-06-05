@@ -2,30 +2,29 @@ function addTask() {
     var input = document.getElementById("taskInput");
     var ul = document.getElementById("taskList");
     var li = document.createElement("li");
-    // li.appendChild(document.createTextNode(input.value));
     var div = document.createElement("div");
+
     div.appendChild(document.createTextNode(input.value));
     div.classList.add("task");
     li.appendChild(div);
-    
+
     // Botão de Remover
     var removeButton = document.createElement("button");
     removeButton.appendChild(document.createTextNode("🗑️"));
     removeButton.onclick = function () {
-        this.parentNode.parentNode.removeChild(this.parentNode);
-    };
-    li.appendChild(removeButton);
-
+    var listItem = this.parentNode.parentNode; // obtém o elemento <li> pai do botão
+    listItem.parentNode.removeChild(listItem); // remove o <li> da lista
+}
     // Botão de Editar
     var editButton = document.createElement("button");
     editButton.appendChild(document.createTextNode("📝"));
     editButton.onclick = function () {
-        var newText = prompt("Editar Tarefa", this.parentNode.firstChild.nodeValue);
+        var divTask = this.parentNode.previousSibling; // Seleciona o elemento div que contém o texto da tarefa
+        var newText = prompt("Editar Tarefa", divTask.textContent); // Pede ao usuário para editar o texto
         if (newText !== null) {
-            this.parentNode.firstChild.nodeValue = newText;
+            divTask.textContent = newText; // Atualiza o texto da tarefa com o novo valor
         }
     };
-    li.appendChild(editButton);
 
     // Botão de Concluir
     var completeButton = document.createElement("button");
@@ -33,8 +32,7 @@ function addTask() {
     completeButton.onclick = function () {
         this.parentNode.classList.toggle("completed");
     };
-    li.appendChild(completeButton);
-    
+
     var divButtons = document.createElement("div");
     divButtons.appendChild(removeButton);
     divButtons.appendChild(editButton);
