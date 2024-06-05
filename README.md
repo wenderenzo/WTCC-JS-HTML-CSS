@@ -125,8 +125,10 @@ alert(mensagem);
 A linha ``` const mensagem = "Olá, Mundo!" ``` cria uma variável chamada mensagem e atribui a ela o valor "Olá, Mundo!".
 A palavra-chave ```const``` é usada para declarar uma constante, o que significa que o valor de mensagem não pode ser alterado depois de definido.
 
+ref: https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 
-###  Estruturas de Controle
+
+###  Condicionais
 
 ~~~javascript
 const hora = 10;
@@ -139,6 +141,8 @@ if (hora < 12) {
 
 Aqui definimos a variável hora como 10 e usamos uma estrutura condicional if para verificar se hora é menor que 12. Se for, ele imprime "Bom dia!" no console, caso contrário, imprime "Boa tarde!". Como hora é 10, o console exibirá "Bom dia!".
 
+ref: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals
+
 
 ###  Manipulação Simples do DOM
 
@@ -150,6 +154,7 @@ document.getElementById("meuTitulo").innerHTML = "Título Alterado";
 
 Aqui selecionamos um elemento do documento HTML com o ID "meuTitulo" e alteramos o seu conteúdo para "Título Alterado". Ele usa ````document.getElementById("meuTitulo").innerHTML```` para acessar e modificar o HTML interno desse elemento.
 
+- ref: https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction
 
 ###  Funções e Eventos Básicos
 
@@ -163,6 +168,7 @@ document.getElementById("meuBotao").onclick = mostrarMensagem;
 
 Nesse exemplo temos a função chamada mostrarMensagem, que exibe um alerta com a mensagem "Você clicou no botão!" quando chamada. Em seguida, ele usa ``document.getElementById("meuBotao").onclick = mostrarMensagem`` para associar essa função ao evento de clique de um botão com o ID "meuBotao". Assim, quando o botão é clicado, a função mostrarMensagem é executada, exibindo o alerta.
 
+ - ref: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events
 
 
  ### EXEMPLO DE INTERATIVIDADE
